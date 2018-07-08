@@ -16,6 +16,7 @@ public class MainLandingWindow extends JFrame {
 
 	
 	public MainLandingWindow() {
+		setResizable(false);
 		getContentPane().setBackground(new Color(250, 235, 215));
 		getContentPane().setLayout(null);
 		

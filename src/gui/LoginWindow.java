@@ -58,6 +58,7 @@ public class LoginWindow {
 	 */
 	private void initialize() { 
 		frmGenie = new JFrame(); 
+		frmGenie.setResizable(false);
 		mainwindow = new MainLandingWindow();
 		actionListener = new ActionListeners(this);
 	
