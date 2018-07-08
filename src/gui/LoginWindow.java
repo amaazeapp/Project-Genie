@@ -57,7 +57,7 @@ public class LoginWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frmGenie = new JFrame();
+		frmGenie = new JFrame(); 
 		mainwindow = new MainLandingWindow();
 		actionListener = new ActionListeners(this);
 	
