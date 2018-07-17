@@ -29,6 +29,9 @@ public class LoginWindow {
 	private JPasswordField passwordField;
 	private MainLandingWindow mainwindow ; 
 	private ActionListeners actionListener ; 
+	private MainMeetingResourceWindow meetingResourceWindow ;
+	private CafeteriaBookingMainWindow cafeteriaMainWindow ; 
+	private RecreationBookingMainWindow recreationMainWindow ; 
 
 	/**
 	 * Launch the application.
@@ -59,9 +62,12 @@ public class LoginWindow {
 	private void initialize() { 
 		frmGenie = new JFrame(); 
 		frmGenie.setResizable(false);
-		mainwindow = new MainLandingWindow();
 		actionListener = new ActionListeners(this);
-	
+		
+		mainwindow = new MainLandingWindow(this);
+		meetingResourceWindow = new MainMeetingResourceWindow(this);
+		cafeteriaMainWindow = new CafeteriaBookingMainWindow(this);
+		recreationMainWindow = new RecreationBookingMainWindow(this);
 		
 		frmGenie.getContentPane().setBackground(new Color(255, 250, 205));
 		frmGenie.setTitle("Genie");
@@ -109,5 +115,22 @@ public class LoginWindow {
 			frmGenie.setVisible(visibility);
 		if(windowname.equalsIgnoreCase("MainLandingWindow"))
 			mainwindow.setVisible(visibility) ; 
+		if(windowname.equalsIgnoreCase("MainMeetingResourceWindow"))
+			meetingResourceWindow.setVisible(visibility);
+		if(windowname.equalsIgnoreCase("CafeteriaBookingMainWindow"))
+			cafeteriaMainWindow.setVisible(visibility);
+		if(windowname.equalsIgnoreCase("RecreationBookingMainWindow"))
+			recreationMainWindow.setVisible(visibility);		
+	}
+	
+	public ActionListeners getActionListener()
+	{
+		return actionListener ; 
+	}
+	
+	public MainMeetingResourceWindow getMainMeetingResourceWindow()
+	{	
+		
+		return meetingResourceWindow ; 
 	}
 }
